@@ -3,7 +3,7 @@
 <template>
   <section>
     <div>
-      <h1>{{message}}</h1>
+      <h1 :class="titleClass">{{message}}</h1>
     </div>
   </section>
 
@@ -14,8 +14,16 @@
 export default {
   data() {
     return{
-      message:"Hello World!!" 
+      message:"Hello World!!",
+      titleClass:"title"
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+h1.title {
+  color:red;
+}
+</style>
+

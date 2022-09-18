@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>
+    <h2 :class = "titleClass ">
       {{message}}
     </h2>
   </section>
@@ -12,9 +12,17 @@
   export default{
     setup(){
       const message = ref("Have a nice day!!!!");
+      const titleClass = ref("title");
       return{
-        message
+        message,
+        titleClass
       }
     }
   }
 </script>
+
+<style lang="scss" scoped>
+h2.title {
+  color:green;
+}
+</style>
